@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" >
     <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   </head>
+
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+      <div class="container">
+        <h1><small>Bienvenido a</small> <%= title %> </h1>
+        <p class="text-justify">Proyecto quiz para miriadaX</p>
+      </div>
+    </header>
   </body>
 </html>
