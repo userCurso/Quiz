@@ -18,6 +18,15 @@ header{
   margin-top: 5%;
 }
 
+.carousel-inner img{
+  width:100%;
+}
+
+.list-border{
+  border-top-width: 3px;
+  border-top-style: solid;
+}
+
 a {
   color: #00B7FF;
 }
