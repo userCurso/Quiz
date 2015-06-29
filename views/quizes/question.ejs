@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" >
-    <title></title>
-    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  </head>
 
-  <body>
-    <header>
-      <div class="container">
-        <h1><small>Bienvenido a</small> </h1>
-        <p class="text-justify">Proyecto quiz para miriadaX</p>
-      </div>
-    </header>
 
-    <section>
-      <div class="container">
         <form action="/quizes/answer" method="get">
           <div class="form-group">
-            <div class="col-md-3">
+            <div class="col-md-4  col-md-offset-4">
             <label for="pregunta"><%= pregunta  %></label>
-            <input type="text" class="form-control" id="pregunta" name="respuesta" placeholder="Responda Aquí" autofocus="On">
+            <input type="text" class="form-control" id="pregunta" name="respuesta" placeholder="Responda Aquí" autofocus="On"autocomplete="Off">
             <input type="submit" class="btn btn-success" value="Enviar"></div>
           </div>
         </form>
-      </div>
-    </section>
-
-  </body>
-</html>

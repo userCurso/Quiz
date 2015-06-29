@@ -6,6 +6,18 @@ header{
     background-color: #F7F7F9;
 }
 
+.list-group li{
+  list-style: none;
+}
+
+.margin-menu{
+  margin-top: 5%;
+}
+
+.margin-footer{
+  margin-top: 5%;
+}
+
 a {
   color: #00B7FF;
 }
