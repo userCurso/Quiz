@@ -12,4 +12,8 @@ router.get('/quizes/question', quizController.question);
 
 router.get('/quizes/answer', quizController.answer);
 
+router.get('/author', function(req, res){
+  res.render('quizes/creditos', {title: 'Creditos'});
+});
+
 module.exports = router;
