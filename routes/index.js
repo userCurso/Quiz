@@ -10,7 +10,9 @@ router.get('/', function(req, res) {
 
 router.param('quizId', quizController.load);
 
-router.get('/quizes', quizController.quizes);
+router.get('/quizesList', quizController.quizes);
+
+router.get('/quizes', quizController.sQuizes);
 
 router.get('/quizes/:quizId(\\d+)', quizController.show);
 

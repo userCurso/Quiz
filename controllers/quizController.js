@@ -21,6 +21,14 @@ exports.quizes = function(req,res){
 
 };
 
+exports.sQuizes = function(req,res){
+  models.Quiz.findAll({where:["pregunta like ?", '%' +req.query.search+ '%']}).then(function(quizes){
+      res.render('quizes/quizes.ejs', {quizes: quizes});
+  })
+
+};
+
+
 exports.show = function(req, res){
   models.Quiz.findById(req.params.quizId).then(function(quiz){
   res.render('quizes/show', {quiz:req.quiz});
