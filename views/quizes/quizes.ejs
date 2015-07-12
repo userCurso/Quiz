@@ -1,0 +1,12 @@
+
+
+        <p class="p-title">Lista general de preguntas</p>
+
+
+        <div class="col-md-6 col-md-offset-3">
+          <ul class="list-group">
+            <%  var i; for(i=0; i < quizes.length; i++){  %>
+            <li class="list-group-item"><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></li>
+            <% } %>
+          </ul>
+        </div>

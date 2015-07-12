@@ -8,6 +8,10 @@ header{
 
 .list-group li{
   list-style: none;
+  text-align: center;
+}
+.list-group-item a{
+    text-decoration: none;
 }
 
 .margin-menu{
@@ -41,6 +45,11 @@ header{
 
 .row img{
   margin:auto;
+}
+
+.p-title{
+  text-align: center;
+  font-size: 3em;
 }
 
 a {

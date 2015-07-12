@@ -1,9 +1,9 @@
 
 
-        <form action="/quizes/answer" method="get">
+        <form action="/quizes/<%= quiz.id %>/answer" method="get">
           <div class="form-group">
             <div class="col-md-4  col-md-offset-4">
-            <label for="pregunta"><%= pregunta  %></label>
+            <label for="pregunta"><%= quiz.pregunta  %></label>
             <input type="text" class="form-control" id="pregunta" name="respuesta" placeholder="Responda Aquí" autofocus="On"autocomplete="Off">
             <input type="submit" class="btn btn-success" value="Enviar"></div>
           </div>
