@@ -1,5 +1,4 @@
 quiz.sqlite
 npm-debug.log
-.gitignore
 .env
 node_modules
