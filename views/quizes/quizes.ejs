@@ -6,7 +6,22 @@
         <div class="col-md-6 col-md-offset-3">
           <ul class="list-group">
             <%  var i; for(i=0; i < quizes.length; i++){  %>
-            <li class="list-group-item"><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></li>
+              <li class="list-group-item"> &nbsp;
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <a class="atitle" href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a>
+                  </div>
+                  <div class="col-md-2 col-md-offset-10">
+                    <a href="quizes/<%= quizes[i].id %>/edit"><i class="glyphicon glyphicon-pencil"></i></a>
+                     <form class="" action="quizes/<%= quizes[i].id %>?_method=delete" method="post">
+                       <button class="btn btn-danger editdanger" type="submit" onclick="return confirm('¿ Eliminar <%= quizes[i].pregunta %> ?');">
+                          <i class="glyphicon glyphicon-trash"></i>
+                       </button>
+                     </form>
+                  </div>
+                </div>
+              </li>
             <% } %>
           </ul>
+          <a href="/quizes/new"><i class="glyphicon glyphicon-plus"></i> Agregar nueva pregunta</a>
         </div>

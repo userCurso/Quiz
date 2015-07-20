@@ -1,0 +1,26 @@
+
+<div class="col-md-6 col-md-offset-3" style="margin-top:30px;">
+
+  <div class="form-group">
+      <label for="pregunta">Pregunta</label>
+      <input type="pregunta" class="form-control" name="quiz[pregunta]" value="<%= quiz.pregunta %>"  required>
+    </div>
+  <div class="form-group">
+        <label for="respuesta">Respuesta</label>
+        <input type="respuesta" class="form-control" name="quiz[respuesta]" value="<%= quiz.respuesta %>"  required>
+  </div>
+
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+
+    <a  class="back" href="/quizesList"><i class="glyphicon glyphicon-arrow-left"></i> Volver </a>
+
+</div>
+
+<div class="col-md-3" style="margin-top:40px;">
+  <% if (errors.length) { %>
+    <% for(var i in errors) { %>
+      <div class="alert alert-danger" role="alert"><%= errors[i].message %></div>
+    <% } %>
+  <% } %>
+</div>
