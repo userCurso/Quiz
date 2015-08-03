@@ -3,14 +3,15 @@
 
   <div class="form-group">
       <label for="pregunta">Pregunta</label>
-      <input type="pregunta" class="form-control" name="quiz[pregunta]" value="<%= quiz.pregunta %>"  required autofocus="on">
+      <input type="text" class="form-control" name="quiz[pregunta]" value="<%= quiz.pregunta %>"  required autofocus="on">
     </div>
   <div class="form-group">
         <label for="respuesta">Respuesta</label>
-        <input type="respuesta" class="form-control" name="quiz[respuesta]" value="<%= quiz.respuesta %>"  required>
+        <input type="text" class="form-control" name="quiz[respuesta]" value="<%= quiz.respuesta %>"  required>
   </div>
 
-  <select class="form-control" name="quiz[tema]">
+  <select class="form-control" name="quiz[tema]" required>
+    <option value=""></option>
     <option value="Paises">Paises</option>
     <option value="Ciencias">Ciencias</option>
     <option value="Tecnologia">Tecnología</option>

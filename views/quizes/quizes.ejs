@@ -13,16 +13,19 @@
                     <a href="#" style="cursor:default;color:#333;"><%= quizes[i].tema %></a>
                   </div>
                   <div class="col-md-2 col-md-offset-10">
+                    <% if(session.user){ %>
                     <a href="quizes/<%= quizes[i].id %>/edit"><i class="glyphicon glyphicon-pencil"></i></a>
                      <form class="" action="quizes/<%= quizes[i].id %>?_method=delete" method="post">
                        <button class="btn btn-danger editdanger" type="submit" onclick="return confirm('¿ Eliminar <%= quizes[i].pregunta %> ?');">
                           <i class="glyphicon glyphicon-trash"></i>
                        </button>
                      </form>
+                     <%}%>
                   </div>
                 </div>
               </li>
             <% } %>
           </ul>
-          <a href="/quizes/new"><i class="glyphicon glyphicon-plus"></i> Agregar nueva pregunta</a>
+          <% if(session.user){ %>
+          <a href="/quizes/new"><i class="glyphicon glyphicon-plus"></i> Agregar nueva pregunta</a><%}else{%> <b>Parece que no estás autenticado, <a href="/login">Ingresa</a>.</b><%}%>
         </div>

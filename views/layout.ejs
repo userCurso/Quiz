@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h1><small>Bienvenido a</small> Quiz </h1>
+            <h1><small>Bienvenido a</small> Quiz <small><% if(session.user){%><%= session.user.username%> !<%}%></small></h1>
             <p class="text-justify">Proyecto quiz para miriadaX</p>
           </div>
           <div class="col-md-6 margin-menu">
@@ -26,7 +26,11 @@
               <li><a href="/quizesList">Lista</a></li>
               <!-- <li><a href="/quizes/question">Comenzar</a></li>-->
 	             <li><a href="/author">Créditos</a></li>
-              <li class="disabled"><a href="#">Log-In</a></li>
+               <% if(!session.user) { %>
+              <li><a data-toggle="tooltip" data-placement="bottom" title="user:admin pass:123" href="/login">Log-In</a></li>
+              <% } else { %>
+                <li><a style="cursor:pointer; "href="/logout">Log-Out</a></li>
+                <% } %>
               <li>
                   <form class="" action="/quizes" method="get">
                     <div class="input-group">

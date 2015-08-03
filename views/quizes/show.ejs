@@ -8,3 +8,22 @@
             <input type="submit" class="btn btn-success" value="Enviar"></div>
           </div>
         </form>
+
+        <div class="col-md-8 col-md-offset-2">
+            <% if (!quiz.Comments.length){ %>
+              <p>
+                No hay comentarios aún
+              </p>
+            <% } else { %>
+              <p>Comentarios existentes : <%= quiz.Comments.length  %></p>
+              <% } %>
+          <a class="glyphicon glyphicon-plus" href="/quizes/<%= quiz.id %>/comments/new">¡Comentar!</a>
+          <% for(index in quiz.Comments){  %>
+              <%  if(quiz.Comments[index].publicado || session.user) { %>
+                <p class="text-center"><b>#<%= quiz.Comments[index].id %>:</b> <%=quiz.Comments[index].texto%>
+                <% if(session.user && !quiz.Comments[index].publicado){%>
+                    <a class="glyphicon glyphicon-thumbs-up"  href="/quizes/<%=quiz.id %>/comments/<%= quiz.Comments[index].id %>/publish"></a>
+                <%}%></p>
+              <%}%>  
+          <%}%>
+        </div>
